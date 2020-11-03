@@ -1,38 +1,45 @@
-.App {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+hr {
+  margin: 0px;
+  color: #2c3335;
+}
+body {
+  background-color: #dae0e2;
+}
+.app {
+  display: grid;
+  place-items: center;
+}
+.app__content {
+  margin-top: 1%;
+}
+.balance__card {
+  padding: 1%;
+  margin: 6px 0px;
+}
+.expense__card {
+  background-color: #eaf0f1;
+  padding: 1%;
+  display: flex;
+  justify-content: space-around;
+}
+.history__card {
+  padding: 1%;
+  margin: 3% 0px;
+}
+.addtransaction__card {
+  padding: 1%;
+  margin: 3% 0px;
+}
+.expense__card__income {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.expense__card__expense {
+  text-align: center;
 }
