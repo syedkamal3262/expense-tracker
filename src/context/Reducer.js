@@ -7,10 +7,20 @@ export const initialState = {
 export const reducer = (state, action) => {
   switch (action.type) {
     case "Add Income": {
-      return { ...state, transaction: [...state.transaction, action.payload] };
+      return {
+         ...state, 
+        transaction: [...state.transaction, action.payload] , 
+        income: state.income + Number(action.payload.amount) ,
+        balance: state.balance+Number(action.payload.amount)
+       };
     }
     case "Add Expense": {
-      return { ...state, transaction: action.payload };
+      return {
+        ...state, 
+       transaction: [...state.transaction, action.payload] , 
+       expense: state.expense + Number(action.payload.amount) ,
+       balance: state.balance + Number(action.payload.amount)
+      };
     }
     default: {
       return { state };

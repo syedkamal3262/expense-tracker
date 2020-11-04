@@ -25,8 +25,9 @@ export default function AddTransaction() {
   };
   const onsubmitHandler = (e) => {
     e.preventDefault();
+    const Trantype = gettransaction.amount.search('-')>-1?"Add Expense":"Add Income"
     dispatch({
-      type: "Add Income",
+      type: Trantype,
       payload: gettransaction,
     });
     console.log(state);

@@ -42,12 +42,20 @@ export default function History() {
             }}
             key={Math.random(1000 * 10)}
           >
-            <ListItemText>
+            <ListItemText style={{
+             flex:"0.5",
+             display: "flex",
+             flexWrap: "wrap",
+             overflow: "auto"
+            }}>
               <p>{sec.text}</p>
             </ListItemText>
-            <ListItemText>
+            <ListItemText style={{
+             flex:"0.5",
+            
+            }}>
               <p>
-                PKR <span style={{ color: "#019031" }}>{sec.amount}</span>
+                PKR <span style={ sec.amount.toString().search('-')?{color:"#019031"}:{color:"#BA2F16"}}>{sec.amount}</span>
               </p>
             </ListItemText>
           </ListItem>
